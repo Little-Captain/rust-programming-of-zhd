@@ -89,10 +89,38 @@ fn main2_14() {
 }
 
 fn main2_15() {
-    use rust_programming_of_zhd::ch02::function::{two_times,two_times_dyn, two_times_impl};
+    use rust_programming_of_zhd::ch02::function::{two_times, two_times_dyn, two_times_impl};
     println!("{} == {}", two_times()(2), 4);
     println!("{} == {}", two_times_dyn()(2), 4);
     println!("{} == {}", two_times_impl()(2), 4);
+}
+
+fn main2_16() {
+    use rust_programming_of_zhd::ch02::control_flow::if_expr;
+    if_expr()
+}
+
+fn main2_17() {
+    use rust_programming_of_zhd::ch02::control_flow::while_fizzbuzz;
+    use rust_programming_of_zhd::ch02::control_flow::loop_fizzbuzz;
+    use rust_programming_of_zhd::ch02::control_flow::for_fizzbuzz;
+    while_fizzbuzz();
+    println!("------------------");
+    loop_fizzbuzz();
+    println!("------------------");
+    for_fizzbuzz();
+}
+
+fn main2_19() {
+    use rust_programming_of_zhd::ch02::control_flow::while_true;
+    use rust_programming_of_zhd::ch02::control_flow::if_true;
+    println!("while_true {}", while_true(12));
+    println!("if_true {}", if_true(12));
+}
+
+fn main2_20() {
+    use rust_programming_of_zhd::ch02::control_flow::match_expr;
+    match_expr(43);
 }
 
 fn main() {
@@ -113,6 +141,10 @@ fn main() {
     main2_13();
     main2_14();
     main2_15();
+    main2_16();
+    main2_17();
+    main2_19();
+    main2_20();
 
     println!("------------------------");
 }
