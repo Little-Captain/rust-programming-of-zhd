@@ -123,6 +123,18 @@ fn main2_20() {
     match_expr(43);
 }
 
+fn main2_21() {
+    use rust_programming_of_zhd::ch02::control_flow::match_bool;
+    use rust_programming_of_zhd::ch02::control_flow::if_let_bool;
+    use rust_programming_of_zhd::ch02::control_flow::while_let_pop;
+    use rust_programming_of_zhd::ch02::control_flow::loop_match_pop;
+
+    match_bool();
+    if_let_bool();
+    while_let_pop();
+    loop_match_pop();
+}
+
 fn main() {
     println!("------------------------");
     main1();
@@ -145,6 +157,7 @@ fn main() {
     main2_17();
     main2_19();
     main2_20();
+    main2_21();
 
     println!("------------------------");
 }

@@ -242,11 +242,21 @@ pub fn match_expr(number: i32) {
 /// }
 /// match_bool();
 /// ```
+pub fn match_bool() {
+    let boolean = true;
+    let binary = match boolean {
+        false => 0,
+        true => 1,
+    };
+    assert_eq!(binary, 1);
+}
 
 // # if let
 ///
 /// Basic usage:
 ///
+/// Rust 还提供了 if let 和 while let 表达式, 分别用来在某些场合替代 match 表达式
+/// 
 /// ```
 /// fn if_let_bool() {
 ///     let boolean = true;
@@ -258,6 +268,14 @@ pub fn match_expr(number: i32) {
 /// }
 /// if_let_bool();
 /// ```
+pub fn if_let_bool() {
+    let boolean = true;
+    let mut binary = 0;
+    if let true = boolean {
+        binary = 1;
+    }
+    assert_eq!(binary, 1);
+}
 
 // # while let
 ///
@@ -272,6 +290,12 @@ pub fn match_expr(number: i32) {
 /// }
 /// while_let_pop();
 /// ```
+pub fn while_let_pop() {
+    let mut v = vec![1, 2, 3, 4, 5];
+    while let Some(x) = v.pop() {
+        println!("{}", x);
+    }
+}
 
 // # while match
 ///
@@ -289,4 +313,12 @@ pub fn match_expr(number: i32) {
 /// }
 /// loop_match_pop();
 /// ```
-fn loop_match_pop() {}
+pub fn loop_match_pop() {
+    let mut v = vec![1, 2, 3, 4, 5];
+    loop {
+        match v.pop() {
+            Some(x) => println!("{}", x),
+            None => break,
+        }
+    }
+}
