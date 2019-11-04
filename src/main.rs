@@ -101,9 +101,9 @@ fn main2_16() {
 }
 
 fn main2_17() {
-    use rust_programming_of_zhd::ch02::control_flow::while_fizzbuzz;
-    use rust_programming_of_zhd::ch02::control_flow::loop_fizzbuzz;
     use rust_programming_of_zhd::ch02::control_flow::for_fizzbuzz;
+    use rust_programming_of_zhd::ch02::control_flow::loop_fizzbuzz;
+    use rust_programming_of_zhd::ch02::control_flow::while_fizzbuzz;
     while_fizzbuzz();
     println!("------------------");
     loop_fizzbuzz();
@@ -112,8 +112,8 @@ fn main2_17() {
 }
 
 fn main2_19() {
-    use rust_programming_of_zhd::ch02::control_flow::while_true;
     use rust_programming_of_zhd::ch02::control_flow::if_true;
+    use rust_programming_of_zhd::ch02::control_flow::while_true;
     println!("while_true {}", while_true(12));
     println!("if_true {}", if_true(12));
 }

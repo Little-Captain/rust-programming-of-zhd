@@ -49,5 +49,5 @@ pub fn sum(a: i32, b: i32) -> i32 {
 }
 
 pub mod binding;
-pub mod function;
 pub mod control_flow;
+pub mod function;
